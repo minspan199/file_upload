@@ -1,0 +1,56 @@
+
+{
+  "Category": {
+    "01": {
+      "Name": "FINGER FOODS",
+      "Image": "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec"
+    },
+    "02": {
+      "Name": "WESTERN SOUP",
+      "Image": "https://images.unsplash.com/photo-1545696563-af8f6ec2295a"
+    },
+    "03": {
+      "Name": "WESTERN SOUP",
+      "Image": "https://images.unsplash.com/photo-1545696563-af8f6ec2295a"
+    },
+    "04": {
+      "Name": "EASTERN SOUP",
+      "Image": "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec"
+    },
+    "05": {
+      "Name": "JAPAN TOFO",
+      "Image": "https://images.unsplash.com/photo-1545696563-af8f6ec2295a"
+    },
+    "06": {
+      "Name": "MEDIFOODS DELIGHT",
+      "Image": "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec"
+    },
+    "07": {
+      "Name": "KOREAN FOODS",
+      "Image": "https://images.unsplash.com/photo-1545696563-af8f6ec2295a"
+    },
+    "08": {
+      "Name": "AMERICAN FOODS",
+      "Image": "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec"
+    },
+    "09": {
+      "Name": "NEW MEXICO",
+      "Image": "https://images.unsplash.com/photo-1545696563-af8f6ec2295a"
+    }
+  },
+
+  "User" : {
+    "0988123456" : {
+      "name" : "Michael",
+      "password" : "123456"
+    },
+    "09881234855" : {
+      "name" : "Duong",
+      "password" : "15fgfd12gdf8"
+    },
+    "17163673188" : {
+      "name" : " Michael",
+      "password" : "@p232324"
+    }
+  }
+}

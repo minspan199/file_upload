@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Applicants</title>
+</head>
+{% extends 'uploader\base.html' %}
+{% block body %}
+{% include 'uploader/nav_header.html' with title='Registered Applicants'%}
+
+
+<table class="table table-hover mx-5">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Email</th>
+        <th scope="col">Resume</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {%for applicant in applicants%}
+    <tr>
+        <th scope="row"> {{forloop.counter}}</th>
+        <td class="bg-info">{{applicant.name}}</td>
+        <td>{{applicant.gender}}</td>
+        <td>{{applicant.email}}</td>
+        <td>{{applicant.file_1}}</td>
+    </tr>
+    {% endfor %}
+    {% endblock %}
+    </tbody>
+</table>
+
+
+</html>

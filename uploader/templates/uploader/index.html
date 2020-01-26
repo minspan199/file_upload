@@ -1,0 +1,93 @@
+{% extends 'uploader\base.html' %}
+{% block body %}
+{% include 'uploader/nav_header.html' with title='Finish the Form'%}
+
+<div class="jumbotron mx-5">
+
+
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- Name and Email -->
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="name">Name</label>
+                <input type="text" class="form-control is-invalid" id="name" name="name" placeholder="Name" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="email">Email</label>
+                <input type="text" class="form-control is-invalid" id="email" name="email" placeholder="Email" required>
+                <div class="invalid-feedback">
+                    Please provide a valid zip.
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- End of Name and Email -->
+        <!-- Gender -->
+        <fieldset class="form-group" id="gender" name="gender">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="M"
+                               checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="F">
+                        <label class="form-check-label" for="gridRadios2">
+                            Female
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="gender" id="gridRadios3" value="O">
+                        <label class="form-check-label" for="gridRadios3">
+                            Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <!-- end of Gender -->
+        <!-- upload file 1-->
+            <label for="file1">Upload your resume below:</label>
+            <br>
+            <input type="file" name="file_1" id="file1" class="btn-info">
+            <button formmethod="get" type="submit" class="save btn btn-primary">Upload</button>
+            <div class="invalid-feedback">
+                Please upload a file.
+            </div>
+        <!-- end of upload file 1-->
+
+                <!-- Agreement -->
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck4" required>
+                <label class="form-check-label" for="invalidCheck4">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+            <button class="btn btn-primary mt-5" type="submit" name="submit">Submit</button>
+        </div>
+        <!-- end of Agreement -->
+        {{form.errors}}
+        {{ field.label_tag }}: {{ field }}
+    </form>
+
+
+    {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    {% endif %}
+</div>
+
+
+{% endblock %}
